@@ -14,7 +14,7 @@ RUN cd $HOME \
     && curl -O https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz \
     && sha1sum wildfly-$WILDFLY_VERSION.tar.gz | grep $WILDFLY_SHA1 \
     && tar xf wildfly-$WILDFLY_VERSION.tar.gz \
-    && mv $HOME/wildfly-$WILDFLY_VERSION $JBOSS_HOME \
+    && mv $HOME/wildfly-$WILDFLY_VERSION/* $JBOSS_HOME \
     && rm wildfly-$WILDFLY_VERSION.tar.gz
 
 # Ensure signals are forwarded to the JVM process correctly for graceful shutdown
