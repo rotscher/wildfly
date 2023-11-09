@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/wildfly:latest    
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/wildfly:latest, ${{ secrets.DOCKERHUB_USERNAME }}/wildfly:11-openjdk8
